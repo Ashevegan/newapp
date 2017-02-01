@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+  root 'pages#index'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
