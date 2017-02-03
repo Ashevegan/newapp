@@ -16,11 +16,11 @@
 //= require_tree .
 
 
-$(".nav a").on("click", function(){
-  $(".nav").find(".active").removeClass("active");
-  $(this).parent().addClass("active");
-});
+//$(".nav a").on("click", function(){
+  //$(".nav").find(".active").removeClass("active");
+  //$(this).parent().addClass("active");
+//};
 
-$(document).on('turbolinks:load', function(){
-  console.log($(".alert"));
-  $(".alert").delay(500).fadeOut(2000);
+//$(document).on('turbolinks:load', function(){
+  //console.log($(".alert"));
+  //$(".alert").delay(500).fadeOut(2000);
