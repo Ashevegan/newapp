@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dogma App</title>
+    <title>Bike NYC</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <%= csrf_meta_tags %>
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
-   <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <div class="navbar-header">v
+          <%= link_to "Bike NYC", static_pages_index_path, :class => "navbar-brand" %>
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/static_pages/landing_page">bikeffm °</a>
         </div>
-  
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
@@ -40,32 +42,54 @@
            <li><%#= link_to('PRODUCTS', products_path) %></li>
             <li><%= link_to('ABOUT', static_pages_about_path) %></li>
             <li><%= link_to('CONTACT', static_pages_contact_path) %></li>
+
+            <!-- Sign up Log in -->
+
+          <ul class="nav nav-pills pull-right" id="nav_login_btn">
             <li>
-            <%# if user_signed_in? #%>
-              <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %>
-            <% else %>
-              <%= link_to('LOGIN', new_user_session_path) %>
-            <% end %>
+              <% if user_signed_in? %>
+                <%= button_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-sm btn-default") %>
+              <% else %>
+                <li><%= button_to('Sign up', new_user_registration_path, :method => :get, class: "btn btn-sm btn-default") %></li>
+                <li><%= button_to('Login', new_user_session_path,:method => :get, class: "btn btn-sm btn-primary") %></li>
+              <% end %>
             </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
+
+           <!-- Search Box -->
+
+          <%= form_tag("/products", method: "get", class: "navbar-form navbar-right") do %>
+            <div class="form-group">
+              <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search for...") %>
+            </div>
+              <%= submit_tag("Go!", class: "btn btn-default") %>
+          <% end %>
+
+          <!-- /Search Box -->
+           </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
+
+
+    <!-- Flash Notice Tags -->
+
     <% if notice %>
-    <div class="alert alert-info" role="alert">
       <p id="notice" class="alert alert-info"><%= notice %></p>
-    </div>
     <% end %>
+
     <% if alert %>
-    <div class="alert alert-danger" role="alert">
-      <p id="alert" class="alert alert-info"><%= alert %></p>
-    </div>
+        <p id="alert" class="alert alert-info"><%= alert %></p>
     <% end %>
+
     <%= yield %>
-    <footer>
-      <h5>&copy; 2017 Dogma</h5>
+       
+  
+      <!-- Footer -->
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; 2017 Bike NYC</p>
+      </div>
     </footer>
+
   </body>
 </html>
-
-
