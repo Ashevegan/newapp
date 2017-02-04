@@ -1,4 +1,5 @@
 
+root :to => 'index#index'
 #Rails.application.routes.draw do
 
   #devise_for :users, :controllers => { :registrations => "user_registrations" }
