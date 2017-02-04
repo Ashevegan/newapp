@@ -29,67 +29,30 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
-            <div class="form-group">
-              <%= label_tag(:q, "Search for:", class: "sr-only") %>
-              <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
-            </div>
-            <%= button_tag("Go", class: "btn btn-default btn-default-transparent") %>
-          <% end %>
-          <ul class="nav navbar-nav navbar-right">
-           <li><%#= link_to('PRODUCTS', products_path) %></li>
-            <li><%= link_to('ABOUT', static_pages_about_path) %></li>
-            <li><%= link_to('CONTACT', static_pages_contact_path) %></li>
 
-            <!-- Sign up Log in -->
-
-          <ul class="nav nav-pills pull-right" id="nav_login_btn">
-            <li>
-              <% if user_signed_in? %>
-                <%= button_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-sm btn-default") %>
-              <% else %>
-                <li><%= button_to('Sign up', new_user_registration_path, :method => :get, class: "btn btn-sm btn-default") %></li>
-                <li><%= button_to('Login', new_user_session_path,:method => :get, class: "btn btn-sm btn-primary") %></li>
-              <% end %>
-            </li>
+        <div class="projectName navbar-brand">
+          <a href="#">NYC BIKES</a>
+        </div> <!-- end projectName-->
+      </div><!-- end navbar-header-->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" id="navbar-right">
+        <nav class="nav nav-inline">
+          <ul class="list-inline">
+            <li><%= link_to "Home", root_path %></li>
+            <%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Store",  products_path %></li>
+            <li><%= link_to "Contact", '/static_pages/contact' %></li>
           </ul>
+         </nav><!-- end of nav-->
+      </div><!--end collapse navbar-->
+     </div><!-- end container fluid -->
+   </nav>
 
-           <!-- Search Box -->
-
-          <%= form_tag("/products", method: "get", class: "navbar-form navbar-right") do %>
-            <div class="form-group">
-              <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search for...") %>
-            </div>
-              <%= submit_tag("Go!", class: "btn btn-default") %>
-          <% end %>
-
-          <!-- /Search Box -->
-           </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
-
-    <!-- Flash Notice Tags -->
-
-    <% if notice %>
-      <p id="notice" class="alert alert-info"><%= notice %></p>
-    <% end %>
-
-    <% if alert %>
-        <p id="alert" class="alert alert-info"><%= alert %></p>
-    <% end %>
 
     <%= yield %>
-       
-  
-      <!-- Footer -->
-  <footer class="footer">
-      <div class="container">
-        <p class="text-muted">&copy; 2017 Bike NYC</p>
-      </div>
-    </footer>
 
+    <footer>
+  &copy; BIKE NYC
+</footer>
   </body>
 </html>
