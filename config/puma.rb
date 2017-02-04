@@ -20,6 +20,12 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # the concurrency of the application would be max `threads` * `workers`.
 # Workers do not work on JRuby or Windows (both of which do not support
 # processes).
+
+  # Worker specific setup for Rails 4.1+
+  # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
+ 
+  # Valid on Rails 4.1+ using the `config/database.yml` method of setting `pool` size
+  
 #
 # workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
