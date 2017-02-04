@@ -1,18 +1,19 @@
+Rails.application.routes.draw do
 
-root :to => 'index#index'
-#Rails.application.routes.draw do
+  resources :products 
+    
 
-  #devise_for :users, :controllers => { :registrations => "user_registrations" }
-  #resources :products do
-    #resources :comments
-  #end
-  #resources :users
+  get 'static_pages/index'
 
-  #get 'static_pages/index'
+  get 'static_pages/about'
 
-  #get 'static_pages/about'
+  get 'static_pages/contact'
 
-  #get 'static_pages/contact'
+  root 'static_pages#index'
+
+
+  resources :orders, only: [:index, :show, :create, :destroy]
+  end
 
   #get 'static_pages/landing_page'
 
