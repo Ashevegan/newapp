@@ -1,3 +1,39 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.img-box {
+    position: relative;
+    float: left;
+    width:  200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.product-details-box{
+	position: relative;
+    float: left;
+    width:  200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.products-form{
+    //text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-colour-change {
+    color: #fff;
+    background-color: #6C464F;
+    border-color: #B3CDD1;
+}
+
+.btn-colour-change:hover {
+    color: #fff;
+    background-color: #9E768F;
+    border-color: #B3CDD1;
+}
