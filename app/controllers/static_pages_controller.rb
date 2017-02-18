@@ -5,9 +5,9 @@ class StaticPagesController < ApplicationController
   def contact
   end
   
-	def landing_page 
-		@products = Product.first
-	end
+	def landing_page
+  @products = Product.limit(3)
+end
   
   def thank_you
   	@name = params[:name]
