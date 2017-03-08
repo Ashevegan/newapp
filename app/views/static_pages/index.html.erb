@@ -1,22 +1,5 @@
-<h1>Products</h1>
-
-<div class="product-search">
-  <%= form_tag("/products", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-</div>
-
-<div class="row product-row">
-	<% cache cache_key_for_products do %>
-	  <%= render @products %>
-	<% end %>
-</div>
-
-
-<br>
-
-<% if signed_in? && current_user.admin? %>
-  <%= link_to 'New Product', new_product_path %>
-<% end %>
+<br></br>
+<h1>NYC Bikes</h1>
+<h2>Your source for fixie bikes in NYC</h2>
+<h3> Top Seller This Week</h3>
+<%= image_tag("Bike4.png", class: "img-responsive") %>

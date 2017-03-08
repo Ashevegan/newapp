@@ -6,8 +6,18 @@ class StaticPagesController < ApplicationController
   end
   
 	def landing_page
-  @products = Product.limit(3)
-end
+ if params[:q]
+       search_term = params[:q]
+       if (Rails.env == "production")
+       @products = Product.where("name ilike ?", "%#{search_term}%")
+      else
+        @products = Product.where("name LIKE ?", "%#{search_term}%")
+      end
+       else
+
+        @products = Product.all
+    end
+  end
   
   def thank_you
   	@name = params[:name]
@@ -16,5 +26,3 @@ end
   	UserMailer.contact_form(@email, @name, @message).deliver_now
 	end
 end
-
- 
