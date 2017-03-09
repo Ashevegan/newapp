@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :products
+  
+  resources :products do
+  resources :comments
+  end
+
+  resources :users
+  resources :orders, only: [:index, :show, :create, :destroy]
 
 
-  get 'static_pages/index'
+
+
+   get 'static_pages/landing_page'
 
   get 'static_pages/about'
 
@@ -11,12 +19,13 @@ Rails.application.routes.draw do
 
   get 'static_pages/store'
 
+   post 'static_pages/thank_you'
 
-  root 'static_pages#index' 
+
+  root 'static_pages#about' 
 
     
 
-  resources :orders, only: [:index, :show, :create, :destroy]
   end
 
 
