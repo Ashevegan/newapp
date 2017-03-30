@@ -46,6 +46,8 @@ gem 'rails_12factor'
 
 gem 'materialize-sass'
 
+gem 'delayed_job_active_record'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
