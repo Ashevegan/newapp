@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
  
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, :except => [:index]
-  load_and_authorize_resource
 
   # GET /users
   # GET /users.json
@@ -12,16 +10,12 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
-    #Work around for authenticate_user! now restricting access to show page for logged in users 
-    if current_user != @user
-      redirect_to root_url, alert: "You are not authorized to access this page."
-    end
+  def index
+    @users = User.all
   end
 
   # GET /users/new
-  def new
-    @user = User.new
+    def show
   end
 
   # GET /users/1/edit
