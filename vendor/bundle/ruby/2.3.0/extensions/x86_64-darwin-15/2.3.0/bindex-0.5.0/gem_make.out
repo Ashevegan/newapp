@@ -1,0 +1,15 @@
+current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-1h8hqqy.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20170406-41620-1c6pys4/bindex

@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+   before_filter :authenticate_user!
+
   # GET /users
   # GET /users.json
   def index
@@ -50,6 +52,8 @@ class UsersController < ApplicationController
       end
     end
   end
+
+
 
   # DELETE /users/1
   # DELETE /users/1.json
