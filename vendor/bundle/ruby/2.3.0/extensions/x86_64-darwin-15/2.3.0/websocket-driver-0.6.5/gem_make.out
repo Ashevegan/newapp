@@ -1,5 +1,9 @@
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+<<<<<<< HEAD
 /Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-1k6mgrg.rb extconf.rb
+=======
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170405-91161-dur8ph.rb extconf.rb
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 creating Makefile
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
@@ -12,4 +16,8 @@ linking shared-object websocket_mask.bundle
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
 make "DESTDIR=" install
+<<<<<<< HEAD
 /Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20170406-41620-3hwo9f
+=======
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20170405-91161-1ujvha4
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311

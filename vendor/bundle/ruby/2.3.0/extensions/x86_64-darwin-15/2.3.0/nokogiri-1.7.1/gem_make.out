@@ -1,5 +1,9 @@
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.7.1/ext/nokogiri
+<<<<<<< HEAD
 /Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-xyqsyd.rb extconf.rb
+=======
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170405-91161-8p5668.rb extconf.rb
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 checking if the C compiler accepts ... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -180,4 +184,8 @@ rm -rf /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/nokogi
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.7.1/ext/nokogiri
 make "DESTDIR=" install
+<<<<<<< HEAD
 /Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20170406-41620-r39yfz/nokogiri
+=======
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20170405-91161-19nqnno/nokogiri
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311

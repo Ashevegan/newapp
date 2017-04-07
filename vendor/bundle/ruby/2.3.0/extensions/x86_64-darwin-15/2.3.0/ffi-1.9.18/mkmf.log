@@ -159,7 +159,11 @@ checked program was:
 "gcc -o conftest -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0/x86_64-darwin15 -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0/ruby/backward -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0 -I. -I/usr/include/ffi  -I/Users/ashleybetances/homebrew/opt/libyaml/include -I/Users/ashleybetances/homebrew/opt/readline/include -I/Users/ashleybetances/homebrew/opt/libksba/include -I/Users/ashleybetances/homebrew/opt/openssl/include -I/Users/ashleybetances/homebrew/opt/libyaml/include -I/Users/ashleybetances/homebrew/opt/readline/include -I/Users/ashleybetances/homebrew/opt/libksba/include -I/Users/ashleybetances/homebrew/opt/openssl/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens  -fno-common -pipe conftest.c  -L. -L/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/lib -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib -L. -fstack-protector -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib    -lffi  -lruby.2.3.0 -lffi  -lpthread -ldl -lobjc "
 Undefined symbols for architecture x86_64:
   "_ffi_raw_call", referenced from:
+<<<<<<< HEAD
       _t in conftest-2f8ffd.o
+=======
+      _t in conftest-5150df.o
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -225,7 +229,11 @@ checked program was:
 "gcc -o conftest -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0/x86_64-darwin15 -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0/ruby/backward -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0 -I. -I/usr/include/ffi  -I/Users/ashleybetances/homebrew/opt/libyaml/include -I/Users/ashleybetances/homebrew/opt/readline/include -I/Users/ashleybetances/homebrew/opt/libksba/include -I/Users/ashleybetances/homebrew/opt/openssl/include -I/Users/ashleybetances/homebrew/opt/libyaml/include -I/Users/ashleybetances/homebrew/opt/readline/include -I/Users/ashleybetances/homebrew/opt/libksba/include -I/Users/ashleybetances/homebrew/opt/openssl/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens  -fno-common -pipe conftest.c  -L. -L/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/lib -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib -L. -fstack-protector -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib    -lffi  -lruby.2.3.0 -lffi  -lpthread -ldl -lobjc "
 Undefined symbols for architecture x86_64:
   "_rb_thread_blocking_region", referenced from:
+<<<<<<< HEAD
       _t in conftest-772243.o
+=======
+      _t in conftest-101424.o
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -365,7 +373,11 @@ checked program was:
 "gcc -o conftest -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0/x86_64-darwin15 -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0/ruby/backward -I/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/include/ruby-2.3.0 -I. -I/usr/include/ffi  -I/Users/ashleybetances/homebrew/opt/libyaml/include -I/Users/ashleybetances/homebrew/opt/readline/include -I/Users/ashleybetances/homebrew/opt/libksba/include -I/Users/ashleybetances/homebrew/opt/openssl/include -I/Users/ashleybetances/homebrew/opt/libyaml/include -I/Users/ashleybetances/homebrew/opt/readline/include -I/Users/ashleybetances/homebrew/opt/libksba/include -I/Users/ashleybetances/homebrew/opt/openssl/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens  -fno-common -pipe conftest.c  -L. -L/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/lib -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib -L. -fstack-protector -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib -L/Users/ashleybetances/homebrew/opt/libyaml/lib -L/Users/ashleybetances/homebrew/opt/readline/lib -L/Users/ashleybetances/homebrew/opt/libksba/lib -L/Users/ashleybetances/homebrew/opt/openssl/lib    -lffi  -lruby.2.3.0 -lffi  -lpthread -ldl -lobjc "
 Undefined symbols for architecture x86_64:
   "_ffi_prep_cif_var", referenced from:
+<<<<<<< HEAD
       _t in conftest-605d65.o
+=======
+      _t in conftest-e124ca.o
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:

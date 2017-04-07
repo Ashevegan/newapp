@@ -1,5 +1,9 @@
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.18/ext/ffi_c
+<<<<<<< HEAD
 /Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-yq1afz.rb extconf.rb
+=======
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170405-91161-pgrdun.rb extconf.rb
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
 checking for ffi_call() in -lffi... yes
@@ -58,4 +62,8 @@ linking shared-object ffi_c.bundle
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.18/ext/ffi_c
 make "DESTDIR=" install
+<<<<<<< HEAD
 /Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20170406-41620-1pn7tfm
+=======
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20170405-91161-dvibxu
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311

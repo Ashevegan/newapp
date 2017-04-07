@@ -1,5 +1,9 @@
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+<<<<<<< HEAD
 /Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-42ifa6.rb extconf.rb
+=======
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170405-91161-tc54dr.rb extconf.rb
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 creating Makefile
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
@@ -16,4 +20,8 @@ linking shared-object byebug/byebug.bundle
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
 make "DESTDIR=" install
+<<<<<<< HEAD
 /Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20170406-41620-1bin1qz/byebug
+=======
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20170405-91161-ua7u0i/byebug
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311

@@ -1,5 +1,9 @@
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+<<<<<<< HEAD
 /Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-1h8hqqy.rb extconf.rb
+=======
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170405-91161-1565yw.rb extconf.rb
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 creating Makefile
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
@@ -12,4 +16,8 @@ linking shared-object bindex/cruby.bundle
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
+<<<<<<< HEAD
 /Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20170406-41620-1c6pys4/bindex
+=======
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20170405-91161-1puv9cm/bindex
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311

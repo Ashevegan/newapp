@@ -1,5 +1,9 @@
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/nio4r-2.0.0/ext/nio4r
+<<<<<<< HEAD
 /Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170406-41620-c5i9w0.rb extconf.rb
+=======
+/Users/ashleybetances/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170405-91161-1n03f0b.rb extconf.rb
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
 checking for unistd.h... yes
 checking for sys/select.h... yes
 checking for poll.h... yes
@@ -276,4 +280,8 @@ linking shared-object nio4r_ext.bundle
 
 current directory: /Users/ashleybetances/Desktop/newapp/vendor/bundle/ruby/2.3.0/gems/nio4r-2.0.0/ext/nio4r
 make "DESTDIR=" install
+<<<<<<< HEAD
 /Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 nio4r_ext.bundle ./.gem.20170406-41620-1su663l
+=======
+/Users/ashleybetances/homebrew/opt/coreutils/bin/ginstall -c -m 0755 nio4r_ext.bundle ./.gem.20170405-91161-1vw4m4y
+>>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
