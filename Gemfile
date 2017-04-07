@@ -44,11 +44,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor'
 
-<<<<<<< HEAD
 gem 'devise'
 
-=======
->>>>>>> 07a130e5aba853ba1f87a7fce372feeb7ab80311
+gem 'cancancan', '~> 1.10'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
