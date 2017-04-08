@@ -48,6 +48,8 @@ gem 'devise'
 
 gem 'cancancan', '~> 1.10'
 
+gem 'will_paginate', '~> 3.1.0'
+
 
 
 # Use Capistrano for deployment
