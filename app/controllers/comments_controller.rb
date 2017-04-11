@@ -15,9 +15,13 @@ def create
     end
   end
 
-@comment = @product.comments.new(params[:comment])
-  def destroy
-  end
+def destroy
+  @comment = Comment.find(params[:id])
+  product = @comment.product
+  @comment.destroy
+  redirect_to product
+end
+
 
   private
 
