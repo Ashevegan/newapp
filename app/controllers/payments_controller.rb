@@ -1,9 +1,11 @@
 class PaymentsController < ApplicationController
+
   before_action :authenticate_user!
+
   def create
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
-    @user=current_user
+    @user = current_user
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
@@ -13,13 +15,10 @@ class PaymentsController < ApplicationController
         :description => params[:stripeEmail]
       )
       if charge.paid
-        Order.create(
-          product_id: @product.id,
-          user_id: @user.id,
-          total: @product.price
-        )
+        Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
         flash[:notice] = "Payment processed successfully"
       end
+      
     rescue Stripe::CardError => e
       # The card has been declined
       body = e.json_body
