@@ -1,9 +1,8 @@
 <script
-src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-data-image="<%= @product.image_url %>"
-data-name="<%= @product.name %>"
-data-description="<%= @product.description %>"
-data-amount="<%= @product.price.to_i * 100 %>">
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-image="/square-image.png"
+  data-name="Bike NYC"
+  data-description="2 widgets ($20.00)"
+  data-amount="2000">
 </script>
-Contact GitHub API Training Shop Blog About
