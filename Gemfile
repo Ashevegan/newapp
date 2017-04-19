@@ -55,6 +55,7 @@ gem 'rails-controller-testing'
 
 gem "factory_girl_rails", "~> 4.0"
 
+gem 'stripe'
 
 
 # Use Capistrano for deployment
