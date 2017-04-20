@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Product Overview:</strong>
   <%= @product.name %>
 </p>
+
+ <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
+
 
 <p>
   <strong>Description:</strong>
@@ -16,6 +19,7 @@
 </p>
 
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
 
 
 <%= form_tag "/payments/create" do %>
