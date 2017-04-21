@@ -3,6 +3,9 @@
 require 'rails/all'
 # Pick the frameworks you want:
 
+config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+
+
 
 # require "rails/test_unit/railtie"
 

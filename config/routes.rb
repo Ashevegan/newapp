@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 
 
-   get 'static_pages/landing_page'
+  get 'static_pages/landing_page'
 
   get 'static_pages/about'
 
@@ -21,10 +21,13 @@ Rails.application.routes.draw do
 
   get 'static_pages/store'
 
-   post 'static_pages/thank_you'
-
-
   root 'static_pages#landing_page' 
+
+  post 'static_pages/thank_you'
+
+  post 'payments/create'
+
+  mount ActionCable.server => '/cable'
 
     
 

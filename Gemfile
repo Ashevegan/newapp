@@ -59,6 +59,8 @@ gem 'stripe'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
