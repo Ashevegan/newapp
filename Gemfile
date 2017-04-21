@@ -57,6 +57,8 @@ gem "factory_girl_rails", "~> 4.0"
 
 gem 'stripe'
 
+gem 'dalli'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
