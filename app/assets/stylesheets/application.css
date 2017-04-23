@@ -15,7 +15,7 @@
 /*navbar*/
 
 .btn {
-  color: black;
+  color: grey;
 }
 
  .centre-text{
@@ -23,7 +23,7 @@
  }
 
 .navbar-default {
-  background-color: #f5f5f5;
+  background-color: grey;
 }
 
 .navbar a:hover {
@@ -90,8 +90,8 @@
 
 /* Login Form */
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #eee;
 }
 
