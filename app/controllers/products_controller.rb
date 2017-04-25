@@ -30,7 +30,8 @@ end
 
   # POST /products
   # POST /products.json
-  def create
+  
+    def create
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -44,21 +45,21 @@ end
     end
   end
 
-   def create
-    @product = Product.find(params[:product_id])
-    @comment = @product.comments.new(comment_params)
-    @comment.user = current_user
+  # def create
+    #@product = Product.find(params[:product_id])
+    #@comment = @product.comments.new(comment_params)
+    #@comment.user = current_user
     
-respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @product, notice: 'Review was created successfully.'}
-        format.json { render :show, status: created, location: @product}
-      else
-        format.html { redirect_to @product, notice: 'Review was not saved successfully.'}
-        format.json { render json: @comment.errors, status: :unprocessable_entity}
-      end
-    end
-  end
+#respond_to do |format|
+      #if @comment.save
+        #format.html { redirect_to @product, notice: 'Review was created successfully.'}
+        #format.json { render :show, status: created, location: @product}
+      #else
+        #format.html { redirect_to @product, notice: 'Review was not saved successfully.'}
+        #format.json { render json: @comment.errors, status: :unprocessable_entity}
+      #end
+    #end
+  #end
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
@@ -91,7 +92,7 @@ respond_to do |format|
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :color)
+      params.require(:product).permit(:name, :description, :image_url, :color, :price)
 
     end
 

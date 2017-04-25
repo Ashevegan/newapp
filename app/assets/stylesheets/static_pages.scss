@@ -1,4 +1,4 @@
-/ Place all the styles related to the static_pages controller here.
+// Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -121,7 +121,7 @@ form {
     border-radius: 2px
 }
 .navbar-brand {
-    padding-top: 10px
+    padding-top: 20px
 }
 .main-title a,
 .main-title a:active,
@@ -146,10 +146,10 @@ h1 {
     padding-bottom: 4em
 }
 .pad-top-double {
-    padding-top: 8em
+    padding-top: 4em
 }
 .pad-bottom-double {
-    padding-bottom: 8em
+    padding-bottom: 4em
 }
 .pad-bottom-extra {
     padding-bottom: 28em
