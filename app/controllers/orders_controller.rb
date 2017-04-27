@@ -1,19 +1,22 @@
 class OrdersController < ApplicationController
-	protect_from_forgery prepend: true
-	before_filter :authenticate_user!
-	def index
-	end
+	before_action :authenticate_user!
+  load_and_authorize_resource
 
-	def show
-	end
+  def index
+    @Orders = Order.where("user_id =?", current_user.id)
+  end
 
-	def new
-	end
+  def show
+  end
 
-	def create
-	end
+  def new
+  end
 
-	def destroy
-	end
-	
+  def create
+  end
+
+  def destroy
+  end
+
+
 end
