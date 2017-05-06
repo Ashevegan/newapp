@@ -3,14 +3,20 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-def index
+def index 
+ if params[:q] 
+search_term = params[:q] 
+if(Rails.env.development?) 
+@products = Product.where("name LIKE ?", "%#{search_term}%") 
+else 
+@products = Product.where("name ilike ?", "%#{search_term}%") 
+end 
 
-    if params[:q]
-      search_term = params[:q]
-      @products = Product.search(search_term)
-    else
-      @products = Product.all
-    end
+else 
+@products = Product.all 
+
+end 
+
 
   # GET /products/1
   # GET /products/1.json
@@ -43,7 +49,7 @@ def index
       end
     end
   end
-
+  
   # def create
     #@product = Product.find(params[:product_id])
     #@comment = @product.comments.new(comment_params)
@@ -72,7 +78,7 @@ def index
       end
     end
   end
-
+  
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
@@ -82,6 +88,7 @@ def index
       format.json { head :no_content }
     end
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -94,5 +101,12 @@ def index
       params.require(:product).permit(:name, :description, :image_url, :color, :price)
 
     end
+  end
 
-end
+
+
+  
+
+
+
+
