@@ -20,7 +20,15 @@
 
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 pad-bottom pad-top">
+              <%= render 'new_comment', product: @product %>
+          </div>
+          <div class="pagination">
+              <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+              <%= render 'comments', product: @product %>
+              <%= will_paginate @comments, :page_links => false %>
+          </div>
 
 <%= form_tag "/payments/create" do %>
   <%= render partial: "shared/stripe_checkout_button" %>
