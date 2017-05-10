@@ -18,7 +18,14 @@
   <%= @product.image_url %>
 </p>
 
-<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
+  <p class="">
+            <% if signed_in? && current_user.admin? %>
+           <%= link_to 'Edit', edit_product_path(@product) %>
+            <% end %>
+            <%= link_to 'Back', products_path, class:'btn btn-default'%>
+            </p>
+
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 pad-bottom pad-top">
