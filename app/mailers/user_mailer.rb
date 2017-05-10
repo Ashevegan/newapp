@@ -17,4 +17,3 @@ end
           :subject => "Welcome to #{@appname}!")
   end
 
-end
