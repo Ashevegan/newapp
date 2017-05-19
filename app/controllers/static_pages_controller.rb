@@ -6,18 +6,14 @@ class StaticPagesController < ApplicationController
   end
   
 	def landing_page
- if params[:q]
-       search_term = params[:q]
-       if (Rails.env == "production")
-       @products = Product.where("name ilike ?", "%#{search_term}%")
-      else
-        @products = Product.where("name LIKE ?", "%#{search_term}%")
-      end
-       else
-
-        @products = Product.all
-    end
+    @featured_product = Product.first
+    @products = Product.limit(3)
   end
+
+  def homepage
+    @products = Product.limit(3)
+  end
+
   
   def thank_you
   	@name = params[:name]
