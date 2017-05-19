@@ -1,16 +1,32 @@
-<% cache product do %>
-<div class="col-sm-6 col-md-4">
+<div class="container">
+<div class="row">
+  <% @products.each do |product| %>
+  <% cache product do %>
 
-  <div class="thumbnail">
-  <%= image_tag(product.image_url, class: "img-responsive") %>
-  <h1><%= product.name %></h1>
-  <p><%= product.description %></p>
-  <p><%= product.colour %></p>
-  <strong>$<%= product.price %></strong><br>
-  <td><%= link_to 'Show', product %></td>
-  <td><%= link_to 'Edit', edit_product_path(product) %></td>
-  <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <h3><%= product.name %></h3>
+  <%= if(product.image_url != nil && product.image_url != "" )
+  link_to(image_tag(product.image_url, class: "img-responsive product-image"), product)
+    else
+  "No image."
+end %>
 
-  </div><!-- thumbnail -->
+<p><%= product.description %><br>
+<%= product.color %><br>
+<%= product.price * 0.01 %> &euro;<br></p>
+<%= link_to 'Show', product, class:'btn btn-default'%>
+<p><% if signed_in? && current_user.admin? %>
+<%= link_to 'Edit', edit_product_path(product) %>
+<% end %>
+  <% if signed_in? && current_user.admin? %>
+<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+  </p>
   </div><!-- /col -->
   <% end %>
+  <% end %>
+  </div>
+
+        <% if signed_in? && current_user.admin? %>
+           <h3><%= link_to 'Creat new product', new_product_path %></h3>
+        <% end %>
