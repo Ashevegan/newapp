@@ -1,4 +1,4 @@
-class PaymentsController < ApplicationController
+nclass PaymentsController < ApplicationController
 
   before_action :authenticate_user!
 

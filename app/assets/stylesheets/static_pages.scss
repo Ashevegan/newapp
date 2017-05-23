@@ -66,7 +66,7 @@ a:visited {
     color: #000;
 }
 form {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 15px;
 }
 .nav {
@@ -76,13 +76,21 @@ form {
 }
 .navbar {
     background-color: #fff;
-    padding: 10px;
+    padding: 1px; 
+    padding-bottom: 5px;
     z-index: 999;
     border: none;
-    margin-bottom: 0
+    margin-bottom: 3px
 }
+
 .navbar a:hover {
     color: #B40431
+
+
+}
+
+.navbar-form .navbar-left {
+    position: right;
 }
 .navbar-inverse .navbar-nav>li>a {
     color: #000;
@@ -121,7 +129,8 @@ form {
     border-radius: 2px
 }
 .navbar-brand {
-    padding-top: 20px
+    padding-top: 40px
+
 }
 .main-title a,
 .main-title a:active,
@@ -146,13 +155,13 @@ h1 {
     padding-bottom: 4em
 }
 .pad-top-double {
-    padding-top: 8em
+    padding-top: 5em
 }
 .pad-bottom-double {
     padding-bottom: 8em
 }
 .pad-bottom-extra {
-    padding-bottom: 28em
+    padding-bottom: 10em
 }
 .my-image {
     display: block;
@@ -264,6 +273,7 @@ a:hover {
     height: auto;
     position: relative;
     background-repeat: no-repeat
+
 }
 .form-control {
     width: 100%;
