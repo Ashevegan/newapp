@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe StaticPagesController, :type => :controller do
-  context 'GET #index' do
-    before do
-      get :index
+  describe StaticPagesController, :type => :controller do
+    context 'GET #index' do
+      before do
+        get :index
     end
 
     it 'responds successfully with an HTTP 200 status code' do
@@ -16,4 +16,4 @@ describe StaticPagesController, :type => :controller do
     end
   end
 
-end
+end   

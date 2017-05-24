@@ -1,46 +1,37 @@
 require 'rails_helper'
 
-describe UsersController, :type => :controller do 
-	#let(:user) { User.create!(email: 'peter@example.com', password: '123456790') }
-	before do
-		#@user = User.create!(email: "ac3639@gmail.com", password: "football2")
-		@user = FactoryGirl.create(:user)
-		@user_1 = User.create!(email: "achen.opg@gmail.com", password: "careerFoundry")
-	end
+describe UsersController, :type => :contoller do 
 
-	describe 'GET #show' do
+  before do
+    @user = FactoryGirl.create(:user)
+    @user2 = FactoryGirl.create(:user)
+  end
 
-		context "User is logged in" do 
-			before do
-				sign_in @user 
-				get :show, params: { id: @user.id }
-			end 
+  describe 'GET#show' do
+    context 'User is logged in' do
+      before do
+        sign_in user
+      end  
+      it "loads correct user details" do 
+        get :show, params: {id: user.id}
 
-			it "loads correct user details" do
-				expect(response).to be_success
-				expect(response). to have_http_status(200)
-				expect(assigns(:user)).to eq @user
-			end
-		end
+        expect(response).to have_http_status(200)
+        expect(assigns(:user)).to eq @user
+      end  
+    end
 
-		context "No user is logged in" do 
-			before do
-				get :show, params: { id: @user.id }
-			end
+    context 'No user is logged in' do 
+      it 'redirects to login' do 
+        get :show, id: user.id    
+      end  
+    end 
 
-			it "redirects to login" do 
-				expect(response).to redirect_to(new_user_session_path)
-			end
-		end 
-
-		context "User is logged in and tries to access user_1 details" do
-			before do 
-				get :show, params: { id: @user_1.id }
-			end
-
-			it "redirects to login" do
-				expect(response).to redirect_to(new_user_session_path)
-			end
-		end	
-	end
-end
+    context 'Cannont access second users show page' do 
+      it "redirects to root" do
+        get :show, params: {id: user.id}
+        redirect_to(root_path)
+      end
+    end    
+  
+  end
+end 
