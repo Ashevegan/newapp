@@ -1,6 +1,3 @@
-
-<p id="notice"><%= notice %></p>
-
 <div class="container pad-top pad-bottom" >
   <% cache @product do %>
     <h2 class="text-center"><%= @product.name %>
@@ -21,10 +18,10 @@
           <div class="col-lg-6 col-md-12 col-sm-12 pad-top">
             <h3 class=""><strong>Description: </strong><%= @product.description %>
             </h3>
-          
+           
             <h3 name="price_in_cents" class="">
 
-              <strong>Price: </strong>
+              <strong>Price: </strong><%= number_to_currency@product.price * 0.01%> 
             </h3>
             <p>
 
@@ -56,4 +53,3 @@
 
       </div>
 </div>
-
