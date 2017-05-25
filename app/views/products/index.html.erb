@@ -1,11 +1,18 @@
-<div class="row">
-  <h1>Bicycles</h1>
-  <%= link_to 'New Product', new_product_path, class:"btn newprodbut btn-default", type:"button" %>
+<div class="pad-top pad-bottom">
+  <h1>Bikes</h1>
 </div>
 
-<div class="row">
-  <% cache @products do %>    
-    <%= render @products %>
-  <% end %>    
-</div>
-
+<table>
+  <%#thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead%>
+<% cache(cache_key_for_products) do %>
+    <%= render partial: 'product' %>
+<% end %>
+</table>
