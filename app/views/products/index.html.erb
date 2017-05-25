@@ -1,18 +1,10 @@
-<div class="pad-top pad-bottom">
+<p id="notice"><%= notice %></p>
+<div class="row">
   <h1>Bikes</h1>
-</div>
-
-<table>
-  <%#thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead%>
-<% cache(cache_key_for_products) do %>
-    <%= render partial: 'product' %>
-<% end %>
-</table>
+  <% cache(cache_key_for_products) do %>
+    <%= render @products %>
+  <% end %>
+  </div><!-- /row -->
+  <br>
+  <span class="btn-create"><%= link_to 'NEW PRODUCT', new_product_path %></span>
+<br>
