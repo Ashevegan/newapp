@@ -3,23 +3,23 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-def index
- if params[:q]
-  search_term = params[:q]
-  @products = Product.search(search_term)
-  if @products.blank?
-  flash[:alert] = 'There are no results that match your search'
-  end
-  else
-  @products = Product.all
-  end
-end
+  load_and_authorize_resource
 
+  def index
 
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end
+  end
   # GET /products/1
   # GET /products/1.json
+
   def show
-  @comments = @product.comments.order("created_At DESC").paginate(:page => params[:page], :per_page => 3)  
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+
   end
 
   # GET /products/new
@@ -33,8 +33,7 @@ end
 
   # POST /products
   # POST /products.json
-  
-    def create
+  def create
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -47,22 +46,7 @@ end
       end
     end
   end
-  
-  # def create
-    #@product = Product.find(params[:product_id])
-    #@comment = @product.comments.new(comment_params)
-    #@comment.user = current_user
-    
-#respond_to do |format|
-      #if @comment.save
-        #format.html { redirect_to @product, notice: 'Review was created successfully.'}
-        #format.json { render :show, status: created, location: @product}
-      #else
-        #format.html { redirect_to @product, notice: 'Review was not saved successfully.'}
-        #format.json { render json: @comment.errors, status: :unprocessable_entity}
-      #end
-    #end
-  #end
+
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
@@ -76,7 +60,7 @@ end
       end
     end
   end
-  
+
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
@@ -86,21 +70,18 @@ end
       format.json { head :no_content }
     end
   end
-  
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name, :description, :image_url, :color, :price)
-
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
   end
 
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:name, :description, :image_url, :color, :price)
+  end
+end
 
 
   
