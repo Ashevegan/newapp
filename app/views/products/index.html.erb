@@ -8,7 +8,7 @@
   <h1>Bikes</h1>
 </header>
 <div class="row">
-
+<% cache product do %>
   <% @products.each do |product| %>
     <%= render partial: "product", locals: {product: product} %>
   <% end %>
