@@ -7,8 +7,6 @@
   <h1>Shop</h1>
 </header>
 <div class="row">
-  <% @products.each do |product| %>
     <%= render partial: "product", locals: {product: product} %>
   <% end %>
-<% end %>
 </div>
