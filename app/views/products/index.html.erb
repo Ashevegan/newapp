@@ -1,35 +1,14 @@
-<div class="container">
-  <div class="form-inline">
-    <h1 id="shop-heading">Shop</h1>
-    <select id="product-select" class="form-control">
-      <option>Featured</option>
-      <option>Best Sellers</option>
-      <option>Newest</option>
-      <option>Price (Desc)</option>
-      <option>Price (Asc)</option>
-    </select>
+
+<% if signed_in? && current_user.admin? %>
+  <div class="create-product">
+    <%= link_to 'Create New Product', new_product_path %>
   </div>
-  <p id="notice"><%= notice %></p>
-</div> <!--end container-->
-
-<hr>
-
-<div class="container-fluid" id="product-wrapper">
-  <div class="row">
-    <div class="col-xs-3" id="sidenav">
-      <ul>
-        <% if user_signed_in? && current_user.admin? %>
-        <%= link_to '+ New Product', new_product_path, class:'btn btn-primary' %>
-        <% end %>
-        <% @products.each do |product| %>
-        <li><%= link_to product.name, product %><li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="col-xs-9">
-      <% cache(cache_key_for_products) do %>
-       <%= render @products %>
-      <% end %>
-    </div>
-  </div> <!-- end row -->
-</div> <!-- end container-fluid -->
+<% end %>
+<header>
+  <h1>Bikes</h1>
+</header>
+<div class="row">
+  <% @products.each do |product| %>
+    <%= render partial: "product", locals: {product: product} %>
+  <% end %>
+</div>
