@@ -1,16 +1,19 @@
-
-<% if signed_in? && current_user.admin? %>
-  <div class="create-product">
-    <%= link_to 'Create New Product', new_product_path %>
-  </div>
-<% end %>
-<header>
+<div class="pad-top pad-bottom">
   <h1>Products</h1>
-</header>
-<div class="row">
+</div>
+
+<table>
+  <%#thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Colour</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead%>
 <% cache(cache_key_for_products) do %>
-  <% @products.each do |product| %>
-    <%= render partial: "product", locals: {product: product} %>
-    </div>
-  <% end %>
+    <%= render partial: 'product' %>
 <% end %>
+</table>
