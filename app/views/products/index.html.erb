@@ -1,8 +1,16 @@
-<div class="pad-top pad-bottom">
-  <h1>Products</h1>
-</div>
 
-<table>
-    <%= render partial: 'product' %>
+<% if signed_in? && current_user.admin? %>
+  <div class="create-product">
+    <%= link_to 'Create New Product', new_product_path %>
+  </div>
 <% end %>
-</table>
+<header>
+  <h1>Products</h1>
+</header>
+<div class="row">
+<% cache(cache_key_for_products) do %>
+  <% @products.each do |product| %>
+    <%= render partial: "product", locals: {product: product} %>
+  <% end %>
+<% end %>
+</div>
