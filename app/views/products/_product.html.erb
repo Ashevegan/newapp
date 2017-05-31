@@ -11,7 +11,7 @@
             "No image."
           end %>
         <p><%= product.description %><br>
-        <%= product.colour %><br>
+        <%= product.color %><br>
         <%= product.price %><br></p>
         <%= link_to 'Show', product, class:'btn btn-default'%>
         <p><% if signed_in? && current_user.admin? %>
