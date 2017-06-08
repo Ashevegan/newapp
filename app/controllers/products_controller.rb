@@ -20,7 +20,7 @@ end
   # GET /products/1.json
 
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
 
   end
 
@@ -79,7 +79,7 @@ end
     @product = Product.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+
   def product_params
     params.require(:product).permit(:name, :description, :image_url, :color, :price)
   end
