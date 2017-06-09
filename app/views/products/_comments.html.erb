@@ -1,6 +1,9 @@
-<div>
-  <% @comments.each do |comment| %>
-    <div class="product-reviews">
-      <%= render partial: "comments/comment", locals: {comment: comment} %>
-  <% end %>
+
+<div class="product-reviews">
+    <% @comments.each do |comment| %>
+        <%= render partial: comment %>
+    <% end %>
+    <div class="flickr_pagination">
+      <%= will_paginate @comments %>
+    </div>
 </div>
