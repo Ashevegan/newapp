@@ -9,9 +9,6 @@ class Ability
         can :read, Product
 
         if user.admin?
-            can :destroy, Comment
-            can :manage, Product
-            can :destroy, User
             can :manage, :all
         end
         # Define abilities for the passed in user here. For example:
