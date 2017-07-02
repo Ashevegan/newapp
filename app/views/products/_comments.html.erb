@@ -1,7 +1,6 @@
-
 <div class="product-reviews">
-    <% @comments.each do |comment| %>
-        <%= render partial: comment %>
+	<% @comments.each do |comment| %>
+    	<%= render partial: comment %>
     <% end %>
     <div class="flickr_pagination">
       <%= will_paginate @comments %>

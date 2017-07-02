@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
- def index
+  def index
   if params[:q]
     search_term = params[:q]
     if (Rails.env == "production")
@@ -18,8 +18,8 @@ end
   # GET /products/1
   # GET /products/1.json
 
-def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+  def show
+  @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new

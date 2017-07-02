@@ -1,20 +1,20 @@
 <% if signed_in? %>
   <div class="container">
     <h4 class="col-xs-12 hide-click-review"><a class="enable-review">Click</a> to write a review!</h4>
-    <div class="review-container">
-      <%= form_for([@product, @product.comments.build], class: "form-group", remote: true) do |f| %>
+      <div class="review-container">
+       <%= form_for([@product, @product.comments.build], class: "form-group", remote: true) do |f| %>
         <p>
           <%= f.label :body, "Review" %><br>
-          <%= f.text_area :body, class: "form-control col-xs-12", rows: 5 %>
+            <%= f.text_area :body, class: "form-control col-xs-12", rows: 5 %>
         </p>
         <p>
           <div class="rating col-xs-12">
-          </div>
-        </p>  
+        </p>
+      </div>  
         <p>
           <%= f.submit "Submit", class: "btn btn-primary col-xs-12 col-sm-6" %>
+          <% end %>
         </p>
-      <% end %>
-    </div>
+      </div>
   </div>
 <% end %>
