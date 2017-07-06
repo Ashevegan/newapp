@@ -2,10 +2,12 @@
 
 <p id="notice"><%= notice %></p>
 
+<% cache @product do %>
 <h1>
   <%= @product.name %>
 </h1>
 <div class="row">
+  data-product-id="<%= @product.id %>
   <div class="col-md-4">
     <h3>Description:</h3>
     <p><%= @product.description %></p>
@@ -22,11 +24,14 @@
       <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
   </div>
+  <% end %>
 
   <div class="col-md-8" id="show-product">
     <%= image_tag(@product.image_url, class:'img-responsive img-zoom', data_zoom_image:"@product.image_url") %>
   </div>
 </div> <!--end row-->
+
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
 <%= render "new_comment" %>
 <%= render "comments" %>
@@ -35,4 +40,5 @@
 <%= link_to 'Edit', edit_product_path(@product), class:'btn btn-primary' %> |
 <%= link_to 'Back', products_path, class:'btn btn-primary' %></div>
 
-</div><!--end container-->
+</div>
+!--end container-->
