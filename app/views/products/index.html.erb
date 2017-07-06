@@ -1,8 +1,9 @@
+<% cache(cache_key_for_products) do %>
 <div class="pad-top pad-bottom">
   <h1>Products</h1>
 </div>
 
 <table>
-    <%= render partial: 'product' %>
-
+	<%= render partial: 'product' %>
 </table>
+<% end %>
