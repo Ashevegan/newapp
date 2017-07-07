@@ -6,7 +6,12 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
+    if params[:q]
+      search_term = params[:q]
       @products = Product.search(search_term)
+      if @products.blank?
+        flash[:alert] = 'There are no results that match your search'
+      end
     else
       @products = Product.all
   end
