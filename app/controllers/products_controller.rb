@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
   def index
      if params[:q]
       search_term = params[:q]
-      if (Rails.env == "production")
 -      @products = Product.where("name ilike ?", "%#{search_term}%")
 -    else
 -      @products = Product.where("name LIKE ?", "%#{search_term}%"
