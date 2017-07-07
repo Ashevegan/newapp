@@ -1,8 +1,12 @@
-<div class="pad-top pad-bottom">
-  <h1>Products</h1>
-</div>
+<p id="notice"><%= notice %></p>
 
-<table>
-	<%= render partial: 'product' %>
-</table>
+<h1>Products</h1>
+<div class="container product-box">
+  <div class="row">
+    <%= render @products %>
+  </div>
+</div>
+<br>
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'New Product', new_product_path %>
 <% end %>
