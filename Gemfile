@@ -63,6 +63,8 @@ gem 'redis-rails'
 
 gem 'newrelic_rpm'
 
+gem 'airbrake-ruby', '~> 2.2'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
