@@ -4,22 +4,22 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-  if params[:q]
-    search_term = params[:q]
+    if params[:q]
+      search_term = params[:q]
     if (Rails.env == "production")
-    @products = Product.where("name ilike ?", "%#{search_term}%")
+      @products = Product.where("name ilike ?", "%#{search_term}%")
     else
-    @products = Product.where("name LIKE ?", "%#{search_term}%") 
+      @products = Product.where("name LIKE ?", "%#{search_term}%") 
     end 
     else
-    @products = Product.all
+      @products = Product.all
   end
-end
+  end
   # GET /products/1
   # GET /products/1.json
 
   def show
-  @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new
@@ -35,15 +35,14 @@ end
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+      respond_to do |format|
+        if @product.save
+          format.html { redirect_to @product, notice: 'Product was successfully created.' }
+          format.json { render :show, status: :created, location: @product }
+        else
+          format.html { render :new }
+          format.json { render json: @product.errors, status: :unprocessable_entity }
+        end
     end
   end
 
@@ -65,9 +64,9 @@ end
   # DELETE /products/1.json
   def destroy
     @product.destroy
-    respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+        format.json { head :no_content }
     end
   end
 
