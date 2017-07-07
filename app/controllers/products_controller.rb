@@ -4,15 +4,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:q]
-      search_term = params[:q]
-    if params[:q]
-      search_term = params[:q]
-      @products = Product.search(search_term)
-      if @products.blank?
-        flash[:alert] = 'There are no results that match your search'
-      end
-    else
+     if params[:q]
+       search_term = params[:q]
+-    if (Rails.env == "production")
+-      @products = Product.where("name ilike ?", "%#{search_term}%")
+-    else
+-      @products = Product.where("name LIKE ?", "%#{search_term}%") 
+-    end 
+
+      else
       @products = Product.all
   end
   end
