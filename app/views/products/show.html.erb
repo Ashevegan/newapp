@@ -34,8 +34,7 @@
     <h4>Buy</h4>
     <%= form_tag "/payments/create" do %>
         <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-        <%end %>
+        <!--<% hidden_field_tag(#:product_id, @product.id) %> -->
   </div>
     <% end %>
 
