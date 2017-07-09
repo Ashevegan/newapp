@@ -1,20 +1,12 @@
-<!--This code is throwing an error
-
-<p><strong>Views:</strong><%= @product.views %></p> -->
-
 <div class="container">
+<!--This code is throwing an error -->
+<p><strong>Views:</strong><%= @product.views %></p>
   <p id="notice"><%= notice %></p>
   <% cache @product do %>
     <h1>
       <%= @product.name %>
     </h1>     
 
-<div class="container">
-  <p id="notice"><%= notice %></p>
-  <% cache @product do %>
-    <h1>
-      <%= @product.name %>
-    </h1>
 
 <div class="row">
   <div class="col-md-4">
@@ -34,7 +26,8 @@
     <h4>Buy</h4>
     <%= form_tag "/payments/create" do %>
         <%= render partial: "shared/stripe_checkout_button" %>
-        <!--<% hidden_field_tag(#:product_id, @product.id) %> -->
+        <% hidden_field_tag(:product_id, @product.id) %> 
+        <% end %>
   </div>
     <% end %>
 

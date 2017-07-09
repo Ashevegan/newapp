@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
     # Products view is throwing a No method error
-    #@product.viewed! 
+    @product.viewed! 
     end
 
 
