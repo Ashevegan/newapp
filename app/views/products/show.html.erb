@@ -1,7 +1,14 @@
+<div class="col-xs-12 col-sm-8 product-box">
+  <p id="notice"><%= notice %></p>
+    <p><strong>Views:</strong><%= @product.views %></p>
+      <% cache @product do %>
+        <p class="product-name">
+          <%= @product.name %>
+        </p>
+
 <div class="container">
   <p id="notice"><%= notice %></p>
   <% cache @product do %>
-  <p><strong>Views:</strong><%= @product.views %></p>
     <h1>
       <%= @product.name %>
     </h1>
@@ -34,6 +41,7 @@
     <%= image_tag(@product.image_url, class:'img-responsive img-zoom', data_zoom_image:"@product.image_url") %>
   </div>
 </div> <!--end row-->
+
 
 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
