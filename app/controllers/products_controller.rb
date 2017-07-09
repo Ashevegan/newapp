@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
     # Products view is throwing a No method error
     @product.viewed! 
     end
-  end
+
 
   # GET /products/new
   def new
