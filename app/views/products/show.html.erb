@@ -1,29 +1,34 @@
 <div class="container">
+  <p id="notice"><%= notice %></p>
+  <% cache @product do %>
+  <p><strong>Views:</strong><%= @product.views %></p>
+    <h1>
+      <%= @product.name %>
+    </h1>
 
-<p id="notice"><%= notice %></p>
-
-<% cache @product do %>
-<h1>
-  <%= @product.name %>
-</h1>
 <div class="row">
   <div class="col-md-4">
     <h3>Description:</h3>
-    <p><%= @product.description %></p>
+      <p><%= @product.description %></p>
+    
     <h4>Price:</h4>
-    <p><%= @product.price %></p>
+      <p><%= @product.price %></p>
+    
     <h4>Ratings:</h4>
-    <% if @product.comments.exists? %>
-      <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-    <% else %>
-      <p>No ratings yet, be the first to review this product!</p>
-    <% end %>
+      <% if @product.comments.exists? %>
+        <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <% else %>
+        <p>No ratings yet, be the first to review this product!</p>
+      <% end %>
+    
     <h4>Buy</h4>
     <%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <% end %>
+    </div>
     <% end %>
-  </div>
-  <% end %>
+    
 
   <div class="col-md-8" id="show-product">
     <%= image_tag(@product.image_url, class:'img-responsive img-zoom', data_zoom_image:"@product.image_url") %>
