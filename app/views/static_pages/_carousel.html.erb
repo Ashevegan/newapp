@@ -8,6 +8,7 @@
         <!-- Indicators -->
 
         <ol class="carousel-indicators hidden-xs">
+        <% cache @product do %>
           <% @products.each_with_index do |product, index| %>
           <li data-target="#carousel-example-generic" data-slide-to="<%=index%>" class=<%= " active" if index == 0 %>></li>
           <% end %>
@@ -21,8 +22,7 @@
           <%= image_tag(product.image_url) %>
             </div>
             <div class="carousel-caption">
-              <h3><%= product.name %>
-              </h3>
+              <h3><%= product.name %></h3>
             </div>
           </div>
           <% end %>
