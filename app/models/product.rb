@@ -20,16 +20,7 @@ class Product < ApplicationRecord
 	def average_rating
 		comments.average(:rating).to_f
 	end
-	
-	def self.search(search_term)
-		app_name = "redacted"
-		if Rails.env.development?
-			Product.where("name LIKE ?", "%#{search_term}%")
-		elsif Rails.env.production?
-			Product.where("name ilike ?", "%#{search_term}%")
-		end
-	
-	end
+
 
 	def views
     	$redis.get("product:#{id}")
