@@ -8,13 +8,11 @@
 
         <!-- Indicators -->
 
-    <ol class="carousel-indicators">
-    <% cache @product do %>
-      <% @products.each_with_index do |product, i| %>
-        <li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="<%= " active" if product == @products.first %>"></li>
-      <% end %>
-    </ol>
-
+        <ol class="carousel-indicators hidden-xs">
+          <% @products.each_with_index do |product, index| %>
+          <li data-target="#carousel-example-generic" data-slide-to="<%=index%>" class=<%= " active" if index == 0 %>></li>
+          <% end %>
+        </ol>
         <!-- Wrapper for slides -->
 
         <div class="carousel-inner" role="listbox">
