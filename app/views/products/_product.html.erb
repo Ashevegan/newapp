@@ -1,31 +1,23 @@
-<div class="container">
-  <div class="row">
-    <% @products.each do |product| %>
-    <% cache product do %>
+<div class="col-xs-12 col-sm-6 col-md-3">
+  <div class="display-product">
+  <% cache product do %>
+    <% if product.image_url.present? %>
+      <%= link_to  image_tag(product.image_url, class: "img-responsive product-img"), product %>
+    <% end %>
+    <div class="product-description">
+      <p class="product-name"><%= product.name %></p>
+      <p>Description: <%= product.description %></p>
+    </div>
+    <hr class="divider">
+    <p class="product-price">Price: <%= product.price %></p>
 
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <h3><%= product.name %></h3>
-         <%= if(product.image_url != nil && product.image_url != "" )
-            link_to(image_tag(product.image_url, class: "img-responsive product-image"), product)
-          else
-            "No image."
-          end %>
-        <p><%= product.description %><br>
-        <%= product.price %><br></p>
-        <%= link_to 'Show', product, class:'btn btn-default'%>
-        <p><% if signed_in? && current_user.admin? %>
-           <%= link_to 'Edit', edit_product_path(product) %>
-        <% end %>
-        <% if signed_in? && current_user.admin? %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        </p>
-      </div><!-- /col -->
+    <div class="product-links">
+      <span><%= link_to 'Show', product %></span>
+      <% if current_user && current_user.admin? %>
+        <span><%= link_to 'Edit', edit_product_path(product) %></span>
+        <span><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% end %>
     <% end %>
-    <% end %>
+    </div>
   </div>
-
-        <% if signed_in? && current_user.admin? %>
-           <h3><%= link_to 'Creat new product', new_product_path %></h3>
-        <% end %>
-</div>
+</div> <!-- /col -->
