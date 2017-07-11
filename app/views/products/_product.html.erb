@@ -1,31 +1,27 @@
-<div class="container">
-  <div class="row">
-    <% @products.each do |product| %>
-    <% cache product do %>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <h3><%= product.name %></h3>
-         <%= if(product.image_url != nil && product.image_url != "" )
-            link_to(image_tag(product.image_url, class: "img-responsive product-image"), product)
-          else
-            "No image."
-          end %>
-        <p><%= product.description %><br>
-        <%= product.price %><br></p>
-        <%= link_to 'Show', product, class:'btn btn-default'%>
-        <p><% if signed_in? && current_user.admin? %>
-           <%= link_to 'Edit', edit_product_path(product) %>
-        <% end %>
-        <% if signed_in? && current_user.admin? %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        </p>
-      </div><!-- /col -->
-    <% end %>
-    <% end %>
-  </div>
-
-        <% if signed_in? && current_user.admin? %>
-           <h3><%= link_to 'Creat new product', new_product_path %></h3>
-        <% end %>
-</div>
+<% cache product do %>
+  <%= link_to product do %>
+    <div class="card">
+      <div class="wrap">
+        <!-- image_tag(product.image_url, class: "card-img-top") -->
+        <%# asset_exists is a helper method available from assets_helper.rb %>
+        <% if asset_exists? "#{product.image_url}" %>
+          <%= image_tag("#{product.image_url}", class: "card-img-top") %>
+        <% else %>
+          <%# noimg.jpg is used in case the product.image_url becomes invalid... %>
+          <%= image_tag("noimg.jpg", class: "card-img-top") %>
+        <% end %>            
+      </div>
+      <% logger.debug "Product: #{product.name}"%>
+      <div class="card-block">
+        <div id="CardTitle_Share">
+          <h4 class="card-title"><%= product.name %></h4>
+        </div>
+        <p class="card-text"><%= product.description %></p>
+      </div>
+      <div class="card-footer">
+        <strong><%= number_to_euro("#{product.price}") %></strong>
+      </div>
+    </div>
+    <!--end card-->
+  <% end %>
+<% end %>
