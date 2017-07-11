@@ -6,12 +6,11 @@ class StaticPagesController < ApplicationController
   end
   
 	def landing_page
-    @featured_product = Product.first
-    @products = Product.limit(3)
-  end
+  @products = Product.all
+end
 
-  def homepage
-    @products = Product.limit(3)
+  def index
+    @products = Product.all
   end
 
   
