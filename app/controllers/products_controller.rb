@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
     end 
     else
    @products = Product.all
+   render layout: "products"
    end
  end
  
