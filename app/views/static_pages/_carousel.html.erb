@@ -19,12 +19,12 @@
         <div class="carousel-inner" role="listbox">
         <% @products.each do |product| %>
           <div class="item<%= " active" if product == @products.first %>">
-          <div class='inner-item img-responsive img-fluid'>
-          <%= image_tag(product.image_url) %>
+          <% if product.image_url.present? %>
+        <%= link_to image_tag(product.image_url, class: "d-block custom-carousel-img"), product %>
+      <% end %>
             </div>
             <div class="carousel-caption">
-              <h3><%= product.name %>
-              </h3>
+              <p class="product-carousel-name"><%= product.name %></p>
             </div>
           </div>
           <% end %>
