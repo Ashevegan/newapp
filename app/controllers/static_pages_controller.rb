@@ -1,18 +1,20 @@
 class StaticPagesController < ApplicationController
-	 def about
+
+  def index
+  end
+	
+  def about
   end
 
   def contact
   end
   
-	def landing_page
-  @products = Product.all
-end
-
-  def index
-    @products = Product.all
+  def landing_page
+    @products = Product.limit(3)
   end
 
+  def _carousel
+    @product = Product.limit(3)
   
   def thank_you
   	@name = params[:name]
