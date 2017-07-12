@@ -1,50 +1,49 @@
-<div class="container">
-<!--This code is throwing an error -->
-<p><strong>Views:</strong><%= @product.views %></p>
-  <p id="notice"><%= notice %></p>
+<div class="container pad-top pad-bottom" >
   <% cache @product do %>
-    <h1>
-      <%= @product.name %>
-    </h1>    
+    <h2 class="text-center"><%= @product.name %></h2>
+  <% end %>
+  <div class="row margin-sides" data-product-id="<%= @product.id %>">
 
-
-<div class="row">
-  <div class="col-md-4">
-    <h3>Description:</h3>
-      <p><%= @product.description %></p>
-    
-    <h4>Price:</h4>
-      <p><%= @product.price %></p>
-    
-    <h4>Ratings:</h4>
-      <% if @product.comments.exists? %>
-        <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-      <% else %>
-        <p>No ratings yet, be the first to review this product!</p>
-      <% end %>
-    
-    <h4>Buy</h4>
-    <%= form_tag "/payments/create" do %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-        <% hidden_field_tag(:product_id, @product.id) %> 
-        <% end %>
+<div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+  <div class='inner-item img-responsive img-fluid'>
+    <div class="image img-zoom">
+      <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: @product.image_url) if @product.image_url %>
     </div>
   </div>
+</div>
+
+<div class="col-lg-6 col-md-12 col-sm-12 pad-top">
+  <h3 class=""><strong>Description: </strong><%= @product.description %></h3>
+  <h3 name="price_in_cents" class=""><strong>Price: </strong><%= number_to_currency@product.price * 0.01%>
+  </h3>
+  
+  <p>
+    <% if user_signed_in? %>
+    <%= form_tag "/payments/create" do %>
+    <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
+    <% end %>
+  </p>
+            
+  <p>Average Rating: <div class="rated" id=average-rating data-score="<%= @product.average_rating %>"></div> </p>
+  <p class="">
+    <% if signed_in? && current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path(@product) %>
+    <% end %>
+    <%= link_to 'Back', products_path, class:'btn btn-default'%>
+  </p>
 
-    
-
-  <div class="col-md-8" id="show-product">
-    <%= image_tag(@product.image_url, class:'img-responsive img-zoom', data_zoom_image:"@product.image_url") %>
+</div>
+  
+  <div class="col-lg-12 col-md-12 col-sm-12 pad-bottom pad-top">
+    <%= render 'new_comment', product: @product %>
   </div>
-</div> <!--end row-->
-
-
-  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-    <%= render "new_comment" %>
-    <%= render "comments" %>
-
-  <div class="btn-wrapper">
-    <%= link_to 'Edit', edit_product_path(@product), class:'btn btn-primary' %> |
-    <%= link_to 'Back', products_path, class:'btn btn-primary' %>
+          
+  <div class="pagination">
+    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+      <%= render 'comments', product: @product %>
+      <%= will_paginate @comments, :page_links => false %>
   </div>
+
+      </div>
+</div>
