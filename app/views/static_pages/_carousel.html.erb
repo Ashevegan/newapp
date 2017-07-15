@@ -7,7 +7,7 @@
 
         <!-- Indicators -->
 
-        <ol class="carousel-indicators hidden-xs">
+        <ol class="carousel-indicators">
           <% @products.each_with_index do |product, index| %>
           <li data-target="#carousel-example-generic" data-slide-to="<%=index%>" class=<%= " active" if index == 0 %>></li>
           <% end %>
