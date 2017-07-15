@@ -8,10 +8,45 @@
 <%= image_tag("bikelogo.png", class: "img-responsive my-image") %>
 </div>
 
-<%= render partial: 'carousel' %>
-
 
 </table>
 <%# test_variable = 42 %>
 <%#= test_variable %>
 <%#= test_variable - 2 %>
+
+
+<div id="Indicators" class="carousel slide" data-ride="carousel">
+
+  <!-- indicators -->
+  <ol class="carousel-indicators">
+    <% x=-1 %>
+    <% @products.each do |product| %>
+      <li data-target="#Indicators" data-slide-to="<%=x.next%>" class="<%= " active" if product == @products.first %>"></li>
+      <%x = x.next%>
+    <% end %>
+
+  </ol>
+
+<!-- Slides -->
+  <div class="Intro">
+    <h1>Welcome to Gearhead Bikes</h1>
+    <h3>your online shop for exclusive fixie bikes</h3>
+  </div>
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+     <%= render partial: "carousel", locals: {product: product} %>
+    <% end %>
+  </div>
+
+  <!-- Controls -->
+
+  <a class="carousel-control-prev" href="#Indicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#Indicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
