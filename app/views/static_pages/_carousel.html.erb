@@ -7,11 +7,14 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
         <!-- Indicators -->
-<ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol> 
+ <ol class="carousel-indicators">
+    <% counter = 0 %>
+    <% 3.times do %>
+      <li data-target="#carousel-example-generic" data-slide-to="<%= counter %>" <%= "class=active" if counter == 0 %>></li>
+      <% counter = counter + 1 %>
+    <% end %>
+  </ol>
+
 
     <!-- Wrapper for slides -->
 
