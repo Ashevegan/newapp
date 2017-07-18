@@ -19,21 +19,20 @@
           <%= @product.description %>
         </p>
         <p class="product-price col-xs-12">
-          <%= @product.price %> $
+          <%= @product.price %> 
         </p>
-        <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-        
         <%= form_tag "../payments/create" do %>
           <%= hidden_field_tag(:product_id, @product.id) %>        
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
-      </div>
+        <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  </div>
       <div class="col-xs-12 col-sm-4">
         <p class="product-image">
           <%= image_tag(@product.image_url, class: "img-responsive image-zoom", data_zoom_image: @product.image_url) %>
         </p>
         <% end %>
-    </div>
+      </div>
   
   </div>
   <%= render "new_comment" %>
@@ -41,5 +40,5 @@
   <%= render "comments" %>
   
 </div>
-      </div>
+  </div>
 </div>
