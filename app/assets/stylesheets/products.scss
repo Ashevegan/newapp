@@ -141,12 +141,12 @@ h1 {
     border: 0px
 }
 .row {
+    float:  left;
+    width: 50%;
     text-align: center
     
 }
-.row {
-    display: inline-block;
-}
+
 .text-muted {
     margin: 0 0 0 20px;
 }
