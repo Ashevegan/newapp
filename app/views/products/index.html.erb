@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
-<div class="pad-top pad-bottom">
-  <table>
-    <%= render @products %>
-  </table>
-</div>
+<div class="menu">
+  Products
+<div class="container" id=products>
+	<div class="row">
+    	<%= render @products %>
+    </div>
+ </div>
+ 
 <br>
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'New Product', new_product_path %>
