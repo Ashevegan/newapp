@@ -1,3 +1,4 @@
+
 // Place all the styles related to the products controller here.
 * {
     box-sizing: border-box
@@ -85,7 +86,7 @@ h1 {
     position: relative
 }
 .product-image {
-    width: 350px;
+    width: 150px;
     position: relative;
     margin: auto;
 }
@@ -142,9 +143,7 @@ h1 {
 }
 .row {
     text-align: center
-    
 }
-
 .text-muted {
     margin: 0 0 0 20px;
 }
@@ -221,8 +220,6 @@ a:hover {
         padding-top: 20px;
         text-align: center
     }
-    
-
     .container {
         width: 90%
     }
@@ -247,11 +244,18 @@ a:hover {
         width: 100%;
         text-align: center
     }
-    
+    #fb-button {
+        width: 50%;
+        float: left
+    }
+    #twitter-button {
+        ;
+        float: right;
+        width: 50%;
     }
     .inner-item img {
         width: 80%;
     }
-
+}
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/

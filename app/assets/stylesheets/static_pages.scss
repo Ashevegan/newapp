@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Place all the styles related to the static_pages controller here.
 * {
     box-sizing: border-box
 }
@@ -66,7 +67,7 @@ a:visited {
     color: #000;
 }
 form {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 15px;
 }
 .nav {
@@ -76,21 +77,13 @@ form {
 }
 .navbar {
     background-color: #fff;
-    padding: 1px; 
-    padding-bottom: 5px;
+    padding: 10px;
     z-index: 999;
     border: none;
-    margin-bottom: 3px
+    margin-bottom: 0
 }
-
 .navbar a:hover {
     color: #B40431
-
-
-}
-
-.navbar-form .navbar-left {
-    position: right;
 }
 .navbar-inverse .navbar-nav>li>a {
     color: #000;
@@ -129,8 +122,7 @@ form {
     border-radius: 2px
 }
 .navbar-brand {
-    padding-top: 40px
-
+    padding-top: 10px
 }
 .main-title a,
 .main-title a:active,
@@ -155,13 +147,13 @@ h1 {
     padding-bottom: 4em
 }
 .pad-top-double {
-    padding-top: 5em
+    padding-top: 8em
 }
 .pad-bottom-double {
     padding-bottom: 8em
 }
 .pad-bottom-extra {
-    padding-bottom: 10em
+    padding-bottom: 28em
 }
 .my-image {
     display: block;
@@ -240,8 +232,8 @@ a:hover {
     right: 10%
 }
 .carousel-caption h3 {
-    font-size: 1.0em;
-    font-weight: 100;
+    font-size: 2.5em;
+    font-weight: 300;
 }
 .carousel-control.left,
 .carousel-control.right {
@@ -273,7 +265,6 @@ a:hover {
     height: auto;
     position: relative;
     background-repeat: no-repeat
-
 }
 .form-control {
     width: 100%;
@@ -393,3 +384,5 @@ a:hover {
         width: 80%;
     }
 }
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
