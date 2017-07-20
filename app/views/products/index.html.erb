@@ -1,12 +1,15 @@
+<!-- Flash notice tags -->
 <p id="notice"><%= notice %></p>
 
-<div class="menu">
-  Products
-<div class="container" id=products>
-	<div class="row">
-    	<%= render @products %>
-    </div>
- </div>
+<div class="pad-top pad-bottom">
+	<h1>Products</h1>
+</div>
+
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+ 	<%= render @products %>
+</div>
+
  
 <br>
 <% if user_signed_in? && current_user.admin? %>
