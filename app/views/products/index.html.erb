@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
-<div class="container product-box">
-  <div class="row">
+<div class="pad-top pad-bottom">
+  <table>
     <%= render @products %>
-  </div>
+  </table>
 </div>
 <br>
 <% if user_signed_in? && current_user.admin? %>
