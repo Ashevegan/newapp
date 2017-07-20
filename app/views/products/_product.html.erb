@@ -1,7 +1,7 @@
-
-<div class="row">
-<div class="col-sm-4 col-sm-4 col-sm-4">
+<div clas="row">
 <% cache product do %>
+
+<div class="col-sm-4 col-sm-4 col-sm-4">
   <h3><%= product.name %></h3>
     <%= if(product.image_url != nil && product.image_url != "" )
       link_to(image_tag(product.image_url, class: "img-responsive product-image"), product)
