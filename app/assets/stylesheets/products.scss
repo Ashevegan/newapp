@@ -17,7 +17,6 @@ body {
 }
 .container {
     width: 80%;
-    margin: auto;
     padding: 8em 0
 
 }
@@ -143,7 +142,8 @@ h1 {
     border: 0px
 }
 .row {
-    text-align: center
+    text-align: center;
+    margin: auto
 }
 .text-muted {
     margin: 0 0 0 20px;
