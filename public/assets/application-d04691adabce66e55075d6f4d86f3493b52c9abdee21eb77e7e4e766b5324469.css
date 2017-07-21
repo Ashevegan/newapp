@@ -1,0 +1,1147 @@
+/* line 1, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/about.scss */
+h1 {
+  padding-top: 50px;
+}
+
+/* line 5, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/about.scss */
+p {
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/* line 11, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/about.scss */
+img {
+  display: block;
+  margin: auto;
+}
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 3, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 6, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+body,
+html {
+  height: 100%;
+}
+
+/* line 10, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+body {
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 79px;
+  position: relative;
+}
+
+/* line 18, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.container {
+  width: 80%;
+  padding: 8em 0;
+}
+
+/* line 23, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.container-fluid {
+  width: 80%;
+  margin: none;
+}
+
+/* line 27, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 36, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+h2 {
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* line 41, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+h3 {
+  font-size: 2.5em;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 47, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* line 53, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+p {
+  font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* line 60, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+h1 {
+  font-weight: 700;
+  font-size: 4em;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+/* line 66, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.form-group {
+  font-size: 1em;
+  padding-top: 1em;
+  text-align: center;
+}
+
+/* line 71, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pad-top {
+  padding-top: 4em;
+}
+
+/* line 74, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pad-bottom {
+  padding-bottom: 4em;
+}
+
+/* line 77, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pad-top-double {
+  padding-top: 8em;
+}
+
+/* line 80, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pad-bottom-double {
+  padding-bottom: 8em;
+}
+
+/* line 83, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.my-image {
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+/* line 88, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.product-image {
+  width: 150px;
+  position: relative;
+  margin: auto;
+}
+
+/* line 93, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+}
+
+/* line 98, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination a,
+.pagination span,
+.pagination em {
+  padding: 0.2em 0.5em;
+}
+
+/* line 103, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 106, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #ff0084;
+}
+
+/* line 111, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination a {
+  border: 1px solid #dddddd;
+  color: #B40431;
+  text-decoration: none;
+}
+
+/* line 116, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination a:hover,
+.pagination a:focus {
+  border-color: #B40431;
+  background: #B40431;
+  color: white;
+}
+
+/* line 122, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination .page_info {
+  color: #aaaaaa;
+  padding-top: 0.8em;
+}
+
+/* line 126, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination .previous_page,
+.pagination .next_page {
+  border-width: 2px;
+}
+
+/* line 130, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination .previous_page {
+  margin-right: 1em;
+}
+
+/* line 133, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination .next_page {
+  margin-left: 1em;
+}
+
+/* line 136, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.glyphicon {
+  font-size: 0.5em;
+  text-align: center;
+  display: inline;
+}
+
+/* line 141, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.pagination a {
+  border: 0px;
+}
+
+/* line 144, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.row {
+  text-align: center;
+  margin: auto;
+}
+
+/* line 148, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.text-muted {
+  margin: 0 0 0 20px;
+}
+
+/* line 151, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+a:visited {
+  color: #fff;
+}
+
+/* line 154, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+a:hover {
+  background-color: #fff;
+}
+
+/* line 157, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+.comments {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 162, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  body,
+  p {
+    text-align: center;
+  }
+
+  /* line 166, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  h2 {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* line 170, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .header-caption {
+    top: 30%;
+  }
+
+  /* line 173, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .carousel-indicators {
+    top: 50%;
+  }
+
+  /* line 176, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .carousel-caption {
+    top: 40%;
+  }
+
+  /* line 179, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .inner-item img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 184, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  body,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  /* line 189, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  h2 {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* line 193, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  h1 {
+    padding-top: 20px;
+  }
+
+  /* line 196, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* line 200, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  #contact {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  /* line 204, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .header-caption {
+    top: 30%;
+    font-size: 62.5%;
+  }
+
+  /* line 208, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .inner-item img {
+    max-width: 150px;
+  }
+
+  /* line 211, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .carousel-caption {
+    top: 30%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 216, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  body,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  /* line 221, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  h2 {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* line 225, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .container {
+    width: 90%;
+  }
+
+  /* line 228, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  #contact {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  /* line 232, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .header-caption {
+    top: 30%;
+  }
+
+  /* line 235, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .header-caption h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  /* line 239, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .carousel-caption {
+    top: 60%;
+  }
+
+  /* line 242, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .about {
+    text-align: center;
+  }
+
+  /* line 245, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  #copywright {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 249, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  #fb-button {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 253, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  #twitter-button {
+    float: right;
+    width: 50%;
+  }
+
+  /* line 258, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/products.scss */
+  .inner-item img {
+    width: 80%;
+  }
+}
+/* line 1, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 6, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+body,
+html {
+  height: 100%;
+}
+
+/* line 13, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+body {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 79px;
+  position: relative;
+}
+
+/* line 21, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.container {
+  width: 80%;
+  margin: none;
+  padding: 8em 0;
+}
+
+/* line 26, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.container-fluid {
+  width: 80%;
+  margin: none;
+}
+
+/* line 30, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 39, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+h2 {
+  font-size: 3em;
+  font-weight: 700;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+/* line 45, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+h3 {
+  font-size: 2em;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+/* line 52, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 1em 0;
+}
+
+/* line 58, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+p {
+  font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  line-height: 30px;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+/* line 66, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+a:visited {
+  color: #000;
+}
+
+/* line 69, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+form {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+/* line 73, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.nav {
+  color: #000;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+/* line 78, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar {
+  background-color: #fff;
+  padding: 10px;
+  z-index: 999;
+  border: none;
+  margin-bottom: 0;
+}
+
+/* line 85, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar a:hover {
+  color: #B40431;
+}
+
+/* line 88, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: #000;
+}
+
+/* line 91, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #B40431;
+}
+
+/* line 94, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #B40431;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+/* line 99, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  color: #B40431;
+}
+
+/* line 104, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-toggle .icon-bar {
+  border: 0;
+}
+
+/* line 107, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+
+/* line 110, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #B40431;
+  color: #fff;
+}
+
+/* line 115, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-toggle {
+  border: 0;
+  background-color: #fff;
+}
+
+/* line 119, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-toggle:focus,
+.navbar-toggle:hover {
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* line 124, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.navbar-brand {
+  padding-top: 10px;
+}
+
+/* line 127, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.main-title a,
+.main-title a:active,
+.main-title a:focus,
+.main-title a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  font-weight: 800;
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 137, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+h1 {
+  font-weight: 700;
+  font-size: 3em;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+/* line 143, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.pad-top {
+  padding-top: 4em;
+}
+
+/* line 146, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.pad-bottom {
+  padding-bottom: 4em;
+}
+
+/* line 149, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.pad-top-double {
+  padding-top: 8em;
+}
+
+/* line 152, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.pad-bottom-double {
+  padding-bottom: 8em;
+}
+
+/* line 155, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.pad-bottom-extra {
+  padding-bottom: 28em;
+}
+
+/* line 158, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.my-image {
+  display: block;
+  margin: auto;
+  max-width: 200px;
+  position: relative;
+}
+
+/* line 164, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+/* line 172, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.text-muted {
+  margin: 0 0 0 20px;
+}
+
+/* line 175, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+a:visited {
+  color: #000;
+}
+
+/* line 178, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+a:hover {
+  background-color: #fff;
+}
+
+/* line 181, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+/* line 184, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel {
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 100%;
+  position: relative;
+}
+
+/* line 190, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.inner-item {
+  text-align: center;
+}
+/* line 192, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.inner-item img {
+  margin: 0 auto;
+}
+
+/* line 196, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.active,
+.carousel,
+.item {
+  height: 80%;
+}
+
+/* line 201, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-inner {
+  margin: 0 auto;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+/* line 207, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.fill {
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 214, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+
+/* line 221, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  font-family: 'Raleway', sans-serif;
+  color: #000;
+  text-decoration: none;
+  text-shadow: none;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  left: 10%;
+  right: 10%;
+}
+
+/* line 234, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-caption h3 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+/* line 238, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  width: 10%;
+  text-decoration: none;
+  text-shadow: none;
+  z-index: 3;
+  color: #B40431;
+}
+
+/* line 247, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-control:focus,
+.carousel-control:hover {
+  opacity: 0.9;
+}
+
+/* line 251, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators li {
+  border: 1px solid #B40431;
+}
+
+/* line 254, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators .active {
+  background-color: #B40431;
+}
+
+/* line 257, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.color-bg {
+  background-color: #F7F7F7;
+}
+
+/* line 260, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.contact {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000;
+  height: auto;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+/* line 269, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.form-control {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px dashed #000;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* line 276, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.form-group {
+  font-size: 1.6em;
+  padding-top: 1em;
+}
+
+/* line 280, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+.form-group label {
+  font-weight: 300;
+}
+
+/* line 283, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+#visible-comment {
+  font-size: 1.6em;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 289, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+#char-count {
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: left;
+  padding: 20px 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 297, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  body,
+  h2,
+  p {
+    text-align: center;
+  }
+
+  /* line 302, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .header-caption {
+    top: 30%;
+  }
+
+  /* line 305, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .carousel-indicators {
+    top: 50%;
+  }
+
+  /* line 308, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    top: 40%;
+  }
+
+  /* line 311, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .inner-item img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 316, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  body,
+  h2,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  /* line 322, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  h1 {
+    padding-top: 20px;
+  }
+
+  /* line 325, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .container {
+    width: 80%;
+  }
+
+  /* line 328, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  #contact {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  /* line 332, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .header-caption {
+    top: 30%;
+    font-size: 62.5%;
+  }
+
+  /* line 336, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .inner-item img {
+    max-width: 150px;
+  }
+
+  /* line 339, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    top: 30%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 344, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  body,
+  h2,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  /* line 350, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .container {
+    width: 90%;
+  }
+
+  /* line 353, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  #contact {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  /* line 357, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .header-caption {
+    top: 30%;
+  }
+
+  /* line 360, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .header-caption h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  /* line 364, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    top: 60%;
+  }
+
+  /* line 367, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .about {
+    text-align: center;
+  }
+
+  /* line 370, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  #copywright {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 374, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  #fb-button {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 378, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  #twitter-button {
+    float: right;
+    width: 50%;
+  }
+
+  /* line 383, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/static_pages.scss */
+  .inner-item img {
+    width: 80%;
+  }
+}
+/* line 5, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+/* line 11, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+}
+
+/* line 18, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+/* line 22, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+/* line 25, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* line 34, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+/* line 37, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 42, /Users/ashleybetances/Desktop/newapp/app/assets/stylesheets/users.scss */
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
