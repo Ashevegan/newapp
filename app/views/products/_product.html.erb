@@ -1,13 +1,14 @@
+
 <% cache product do %>
- <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="product-item"> 
-      <h3 class="product-name"><%= link_to product.name, product %><h3>
-      <%= link_to(image_tag(product.image_url, class: "img-circle img-responsive"), product) %>
-      <h3 class="product-description"><%= truncate(product.description, length: 150) %></h3>
-        <hr>
- </div>     
+<div class="col-xs-12 col-sm-6 col-md-3">
+  <div class="product-item"> 
+    <h3 class="product-name"><%= link_to product.name, product %><h3>
+    <%= link_to(image_tag(product.image_url, class: "img-circle img-responsive"), product) %>
+    <p class="product-description"><%= truncate(product.description, length: 150) %></p>
       
-    <div class="product-price"><%= product.price %></div>
+    <hr>
+      
+    <h3 class="product-price"><%= product.price %></h3>
     <div class="col-xs-12 edit-product">
       <% if user_signed_in? && current_user.admin? %>
         <%= link_to 'Show', product %>
