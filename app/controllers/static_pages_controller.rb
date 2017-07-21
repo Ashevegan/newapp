@@ -11,9 +11,6 @@ class StaticPagesController < ApplicationController
     @products = Product.limit(3)
   end
 
-  def index
-    @products = Product.limit(3)
-  end
 
   
   def thank_you
