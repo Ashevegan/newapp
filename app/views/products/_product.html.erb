@@ -6,7 +6,7 @@
     <p class="product-description"><%= truncate(product.description, length: 150) %></p>
       <hr>
       
-    <div class="product-price"><%= product.price %> €</div>
+    <div class="product-price"><%= product.price %></div>
     <div class="col-xs-12 edit-product">
       <% if user_signed_in? && current_user.admin? %>
         <%= link_to 'Show', product %>
