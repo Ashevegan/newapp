@@ -1,27 +1,19 @@
 <% cache product do %>
-
-<div class="col-md-4 col-sm-6 col-xs-12">
-        <h3><%= product.name %></h3>
-         <%= if(product.image_url != nil && product.image_url != "" )
-            link_to(image_tag(product.image_url, class: "img-responsive product-image"), product)
-          else
-            "No image."
-          end %>
-        <p><%= product.description %><br>
-        <%= product.price %><br></p>
-        <%= link_to 'Show', product, class:'btn btn-default'%>
-        <p><% if signed_in? && current_user.admin? %>
-           <%= link_to 'Edit', edit_product_path(product) %>
-        <% end %>
-        <% if signed_in? && current_user.admin? %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        </p>
-      </div><!-- /col -->
-    <% end %>
+<div class="col-xs-12 col-sm-6 col-md-3">
+  <div class="product-item"> 
+    <h2 class="product-name"><%= link_to product.name, product %><h2>
+    <%= link_to(image_tag(product.image_url, class: "img-circle img-responsive"), product) %>
+    <p class="product-description"><%= truncate(product.description, length: 150) %></p>
+      <hr>
+      
+    <div class="product-price"><%= product.price %> €</div>
+    <div class="col-xs-12 edit-product">
+      <% if user_signed_in? && current_user.admin? %>
+        <%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
   </div>
-
-        <% if signed_in? && current_user.admin? %>
-           <h3><%= link_to 'Creat new product', new_product_path %></h3>
-        <% end %>
 </div>
+<% end %>
