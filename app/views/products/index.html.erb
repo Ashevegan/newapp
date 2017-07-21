@@ -1,17 +1,11 @@
-<!-- Flash notice tags -->
 <p id="notice"><%= notice %></p>
 
-<div class="pad-top pad-bottom">
-	<h1>Products</h1>
+<h1>Products</h1>
+<div class="container product-box">
+  <div class="row">
+    <%= render @products %>
+  </div>
 </div>
-
-<div class="row">
-	<% cache(cache_key_for_products) do %>
- 	<%= render @products %>
-</div>
-<%end%>
-
- 
 <br>
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'New Product', new_product_path %>
