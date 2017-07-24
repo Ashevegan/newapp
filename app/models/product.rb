@@ -22,11 +22,11 @@ class Product < ApplicationRecord
 	end
 
 
-	def views
-    	$redis.get("product:#{id}")
-  	end
+	#def views
+    	#$redis.get("product:#{id}")
+  	#end
 
- 	def viewed!
-    	$redis.incr("product:#{id}")
- 	end
+ 	#def viewed!
+    	#$redis.incr("product:#{id}")
+ 	#end
 end
