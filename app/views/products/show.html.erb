@@ -1,66 +1,42 @@
-<div class="container">
+<div class="container product-show-wrapper">
   <div class="row" data-product-id="<%= @product.id %>">
-    <div class="col-xs-12 col-sm-6 col-md-6 show-product-img">
-    <% cache @product do %>
-      <% if @product.image_url.present? %>
-        <%= image_tag(@product.image_url, data_zoom_image: "@product.image_url", class: "img-zoom img-responsive product-img") %>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 description">
-      <p>
-        <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
-
-      <p>
-        <strong>Description:</strong>
-        <%= @product.description %>
-      </p>
-
-      <p class="show-product-price">
-        <strong>Price:</strong>
-        <%= @product.price %> 
-      </p>
-      <p>Average Rating: <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span> </p>
-      <p>
-        Highest Rating:
-        <span class="rated" id="highest-rating" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></span>
-        </br>
-        <strong>Comment:</strong> <%= @product.highest_rating_comment.try(:body) %>
-      </p>
-      <div>
-        <%= form_tag "/payments/create" do %>
+    <% if user_signed_in? && current_user.admin? %>
+      <div class="col-xs-12">
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %> |
+        <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+    
+    <div class="col-xs-12 col-sm-8 product-box">
+      <% cache @product do %>
+        <p class="product-name">
+          <%= @product.name %>
+        </p>
+        
+        <p class="product-description">
+          <%= @product.description %>
+        </p>
+        <p class="product-price col-xs-12">
+          <%= @product.price %> 
+        </p>
+        <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+        
+        <%= form_tag "../payments/create" do %>
+          <%= hidden_field_tag(:product_id, @product.id) %>        
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
       </div>
-    </br>
-      <div class="show-product-link">
-        <%= link_to ' Back', products_path, class: 'glyphicon glyphicon-arrow-left btn btn-primary', role: 'button'%>
-        <% if signed_in? && current_user.admin? %>
-        <%= link_to ' Edit', edit_product_path(@product), class: 'glyphicon glyphicon-edit btn btn-primary', role: 'button' %>
+      <div class="col-xs-12 col-sm-4">
+        <p class="product-image">
+          <%= image_tag(@product.image_url, class: "img-responsive image-zoom", data_zoom_image: @product.image_url) %>
+        </p>
         <% end %>
-    <!-- <% end %> -->
-      </div>
     </div>
+  
   </div>
-</br>
-  <div class="row">
-    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-    <% if signed_in? %>
-    <div class="col-xs-12 col-sm-5 col-md-5 comments">
-      <%= render partial: "new_comment", locals: {comment: @comment} %>
-    </div>
-    <div class="col-xs-0 col-sm-1 col-md-1 comments"></div>
-    <% end %>
-    <div class="col-xs-12 col-sm-6 col-md-6 comments">
-      <%= render partial: "comments", locals: {comment: @comment} %>
-      <div class="apple_pagination">
-          <div class="apple_pagination page_entries">
-            <%= page_entries_info @comments %>
-          </div>
-          <%= will_paginate @comments, :container => false %>
-      </div>
-    </div>
- 
-
-
+  <%= render "new_comment" %>
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+  <%= render "comments" %>
+  
+</div>
