@@ -27,17 +27,19 @@
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
        
-        <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+         <p>Average Rating: <div class="rated" id=average-rating data-score="<%= @product.average_rating %>"></div> </p>
+            <p class="">
 
   </div>
       <div class="col-xs-12 col-sm-4">
-        <p class="product-image">
-          <%= image_tag(@product.image_url, class: "img-responsive image-zoom", data_zoom_image: @product.image_url) %>
-        </p>
-        <% end %>
+        <div class='inner-item img-responsive img-fluid'>
+          <div class="image img-zoom">
+          <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: @product.image_url) if @product.image_url %>
+
+        </div>
       </div>
-  
-  </div>
+    </div>
+    
   <%= render "new_comment" %>
   <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
   <%= render "comments" %>
