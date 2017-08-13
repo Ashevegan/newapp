@@ -1,6 +1,6 @@
 # README
 
-This is a section about my app, which I have no idea what it is yet. 
+This is a section about my first app projected created during my web development course. 
 
 Things you may want to cover:
 
