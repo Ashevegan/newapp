@@ -1,6 +1,6 @@
-# README
+# Gearhead Social 
 
-This is a section about my first app projected created during my web development course. 
+Gearhead Social was my first app project created during my web development course. 
 
 Things you may want to cover:
 
